@@ -1,0 +1,20 @@
+﻿@model IEnumerable<OnlineFoodDelivery.Data.Models.Restaurant>
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Restaurants</h1>
+    <h2>There are total @Model.Count() restaunrant here. Here is list of those</h2>
+    <div>
+        <ul>
+            @foreach(var restaurant in Model)
+            {
+             <li>@restaurant.Name</li>
+            }
+        </ul>
+    </div>
+</div>
+
