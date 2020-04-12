@@ -9,10 +9,10 @@ namespace OnlineFoodDelivery.Web.Controllers
 {
     public class HomeController : Controller
     {
-        IRestaurantService db;
-        public HomeController()
+       private readonly IRestaurantService db;
+        public HomeController(IRestaurantService db)
         {
-            db = new InMemoryRestaurantData();
+            this.db = db;
         }
         public ActionResult Index()
         {
